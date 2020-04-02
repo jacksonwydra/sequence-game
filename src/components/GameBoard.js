@@ -1,5 +1,27 @@
 import React from "react";
 
-export default function GameBoard() {
-  return <h1>Hello from GameBoard</h1>;
-}
+import Square from "./Square.js";
+
+let GameBoard = () => {
+  return (
+    <div className="game-board">
+      <div className="row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className="row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className="row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+    </div>
+  );
+};
+
+export default GameBoard;

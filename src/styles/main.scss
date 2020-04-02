@@ -1,5 +1,43 @@
-$bgColor: #c5c5c5;
+$borderColor: #bbb;
 
 body {
-    background-color: $bgColor;
+    margin-top: 100px;
+}
+
+.game {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.game-config,
+.game-board {
+  text-align: center;
+  width: 50%;
+  outline: thin solid $borderColor;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+.square {
+  flex: 1 0 auto;
+  position: relative;
+  outline: thin solid $borderColor;
+  background-color: #fff;
+  transition: background-color 1s;
+}
+
+.square:after {
+  content: "";
+  float: left;
+  display: block;
+  padding-top: 100%;
+}
+
+.click {
+    transition: background-color 0s;
+    background-color: lightskyblue;
 }

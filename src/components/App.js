@@ -2,10 +2,12 @@ import React from "react";
 
 import Game from "./Game.js";
 
-export default function App() {
+let App = () => {
   return (
     <div id="App">
       <Game />
     </div>
   );
-}
+};
+
+export default App;

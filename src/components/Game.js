@@ -3,11 +3,13 @@ import React from "react";
 import GameConfig from "./GameConfig.js";
 import GameBoard from "./GameBoard.js";
 
-export default function Game() {
+let Game = () => {
   return (
-    <div>
+    <div className="game">
       <GameConfig />
       <GameBoard />
     </div>
   );
-}
+};
+
+export default Game;

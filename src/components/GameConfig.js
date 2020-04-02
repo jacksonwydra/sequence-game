@@ -1,5 +1,11 @@
 import React from "react";
 
-export default function GameConfig() {
-  return <h1>Hello from GameConfig</h1>;
-}
+let GameConfig = () => {
+  return (
+    <div className="game-board">
+      <h3>Sequence Game</h3>
+    </div>
+  );
+};
+
+export default GameConfig;
