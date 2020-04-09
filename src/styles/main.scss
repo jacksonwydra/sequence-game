@@ -38,6 +38,19 @@ body {
 }
 
 .click {
-    transition: background-color 0s;
-    background-color: lightskyblue;
+    -webkit-animation-name: flash-animation;
+    -webkit-animation-duration: .5s;
+
+    animation-name: flash-animation;
+    animation-duration: .5s;
+}
+
+@-webkit-keyframes flash-animation {  
+    from { background: lightskyblue; }
+    to   { background: white; }
+}
+
+@keyframes flash-animation {  
+    from { background: lightskyblue; }
+    to   { background: white; }
 }

@@ -1,14 +1,28 @@
 import React, { useState } from "react";
 
 let Square = () => {
-  let [className, setClassName] = useState("square");
+  const initialState = {
+    className: "square",
+    isActive: true,
+  };
+
+  let [state, setState] = useState(initialState);
+
+  let handleClick = () => {
+    if (state.isActive) {
+      setState({ className: state.className + " click", isActive: false });
+    }
+  };
+
+  let handleAnimationEnd = () => {
+    setState({ className: initialState.className, isActive: true });
+  };
 
   return (
     <div
-      className={className}
-      onMouseDown={() => setClassName(className + " click")}
-      onMouseLeave={() => setClassName("square")}
-      onMouseUp={() => setClassName("square")}
+      className={state.className}
+      onClick={handleClick}
+      onAnimationEnd={handleAnimationEnd}
     ></div>
   );
 };
